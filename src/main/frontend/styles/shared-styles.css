@@ -1,0 +1,116 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+:host {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100vh !important;
+    width: 100vw !important;
+}
+
+.background-container {
+    background-image: url('../images/persona3new.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.content-container {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    width: 90% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+/* Убедимся, что Vaadin Grid тоже прозрачный */
+vaadin-grid {
+    background: transparent !important;
+}
+
+vaadin-grid::part(header-cell) {
+    background-color: rgba(255, 255, 255) !important;
+}
+
+vaadin-grid::part(cell) {
+    background-color: rgba(255, 255, 255) !important;
+}
+
+vaadin-button {
+    background-color: white !important;
+    color: #333 !important;
+    border: 1px solid #ccc !important;
+}
+
+vaadin-text-field::part(input-field) {
+    background-color: white !important;
+}
+
+vaadin-select::part(input-field) {
+    color: #333 !important;
+}
+
+.pagination-layout,
+.page-size-layout,
+.filter-layout {
+    background-color: white !important;
+    padding: 10px !important;
+    border-radius: 4px !important;
+    margin-bottom: 10px !important;
+}
+
+.filter-info {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    padding: 5px 10px !important;
+    border-radius: 4px !important;
+    margin-bottom: 10px !important;
+}
+
+/* Стили для обязательных полей */
+[required]::part(label)::after {
+    content: " *";
+    color: red;
+}
+
+/* Стили для невалидных полей */
+[invalid]::part(input-field) {
+    border-color: #dc3545 !important;
+    background-color: #fff5f5 !important;
+}
+
+vaadin-number-field::part(input-field) {
+    background-color: white !important;
+}
+
+vaadin-select::part(input-field) {
+    background-color: white !important;
+    color: #333 !important;
+}
+.edit-button {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.edit-button vaadin-icon {
+    width: 16px !important;
+    height: 16px !important;
+}
